@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Booking System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>QuickBook</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#booking">Book Now</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Book Your Appointment Online</h2>
+    <p>Fast, Easy, and Reliable Online Booking System</p>
+    <button onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'})">Book Now</button>
+  </section>
+
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <div class="service-boxes">
+      <div class="service-box">
+        <h3>🏨 Hotel Booking</h3>
+        <p>Reserve your stay at top-rated hotels with just a few clicks.</p>
+      </div>
+      <div class="service-box">
+        <h3>✈️ Flight Booking</h3>
+        <p>Book domestic and international flights at affordable prices.</p>
+      </div>
+      <div class="service-box">
+        <h3>🍽 Restaurant Booking</h3>
+        <p>Reserve your favorite restaurants online without hassle.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking" id="booking">
+    <h2>Book Your Slot</h2>
+    <form id="bookingForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="service">Select Service</label>
+      <select id="service" name="service" required>
+        <option value="">--Choose--</option>
+        <option value="hotel">Hotel Booking</option>
+        <option value="flight">Flight Booking</option>
+        <option value="restaurant">Restaurant Booking</option>
+      </select>
+
+      <label for="date">Date</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="time">Time</label>
+      <input type="time" id="time" name="time" required>
+
+      <button type="submit">Confirm Booking</button>
+    </form>
+    <p id="confirmation" class="hidden"></p>
+  </section>
+
+  <section class="cta" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@quickbook.com | Phone: +91-9876543210</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 QuickBook. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
